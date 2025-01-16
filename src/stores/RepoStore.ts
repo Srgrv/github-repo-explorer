@@ -70,7 +70,15 @@ class RepoStore {
   editRepo = (id: number, updates: Partial<Repo>) => {
     const index = this.repos.findIndex((repo) => repo.id === id);
     if (index !== -1) {
-      this.repos[index] = { ...this.repos[index], ...updates };
+      // Вместо мутации массива создаем новый массив
+      const udpatedRepos = [...this.repos];
+      udpatedRepos[index] = { ...udpatedRepos[index], ...updates };
+      // Обновляем состояние с новым массивом
+      runInAction(() => {
+        this.repos = udpatedRepos;
+      });
+
+      //   this.repos[index] = { ...this.repos[index], ...updates };
     }
   };
 
