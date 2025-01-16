@@ -1,0 +1,17 @@
+.repoList {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.sortControls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
