@@ -1,7 +1,7 @@
 import React from "react";
 import { ConfigProvider } from "antd";
-import RepoList from "./components/RepoList";
-import AuthForm from "./components/AuthForm";
+import RepoList from "./components/RepoList.tsx";
+import AuthForm from "./components/AuthForm.tsx";
 
 const App: React.FC = () => {
   return (

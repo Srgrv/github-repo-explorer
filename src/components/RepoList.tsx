@@ -59,19 +59,29 @@ const RepoList: React.FC = observer(() => {
       <div className={styles.sortControls}>
         <Select
           defaultValue={sortField}
+          aria-label="Сортировать по"
           style={{ width: 120 }}
           onChange={(value: "stars" | "name") => setSortField(value)}
         >
-          <Option value="stars">Звезды</Option>
-          <Option value="name">Имя</Option>
+          <Option value="stars" role="option">
+            Звезды
+          </Option>
+          <Option value="name" role="option">
+            Имя
+          </Option>
         </Select>
         <Select
           defaultValue={sortOrder}
+          aria-label="Порядок сортировки"
           style={{ width: 120 }}
           onChange={(value: "asc" | "desc") => setSortOrder(value)}
         >
-          <Option value="asc">По возрастанию</Option>
-          <Option value="desc">По убыванию</Option>
+          <Option value="asc" role="option">
+            По возрастанию
+          </Option>
+          <Option value="desc" role="option">
+            По убыванию
+          </Option>
         </Select>
       </div>
       <List
